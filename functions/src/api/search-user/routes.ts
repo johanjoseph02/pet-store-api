@@ -15,6 +15,12 @@ searchuserRoute.post(
 
             const reqDoc = firestoreClient.collection("petDetails").doc(req.params.petid);
             let petDetail = await reqDoc.get();
+
+            if((petDetail.data).length == 0)
+            {
+                throw '>> User does not exist <<';
+            }
+
             let searchResult = petDetail.data();
             
             res
