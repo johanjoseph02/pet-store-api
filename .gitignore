@@ -67,3 +67,4 @@ node_modules/
 
 # security key
 functions/serviceAccountKey.json
+functions/lib/serviceAccountKey.json
